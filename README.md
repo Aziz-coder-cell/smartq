@@ -122,11 +122,8 @@ SmartQ’s question generation and distractor creation were evaluated using a co
 
 * Performance may vary with highly technical or ambiguous text.
 * Distractor generation occasionally produces overly similar or trivial options.
-
 ---
 
 ## 📌 License
-
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
 ````
