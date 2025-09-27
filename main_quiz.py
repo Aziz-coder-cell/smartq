@@ -16,7 +16,7 @@ if not os.path.exists(nltk_data_dir):
 
 nltk.data.path.insert(0, nltk_data_dir)
 
-nltk.download("punkt", download_dir=nltk_data_dir)
+nltk.download("punkt_tab", download_dir=nltk_data_dir)
 nltk.download('averaged_perceptron_tagger', download_dir=nltk_data_dir)
 
 @st.cache_data
