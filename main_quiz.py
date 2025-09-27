@@ -1,22 +1,23 @@
 import random 
 import pandas as pd
 import streamlit as st 
-import nltk 
 from nltk.tokenize import sent_tokenize, word_tokenize
 from transformers import pipeline, T5Tokenizer
 from sentence_transformers import SentenceTransformer, util
+import nltk
+import os
+import sys
 
-try:
-    nltk.data.find("tokenizers/punkt")
-except LookupError:
-    nltk.download("punkt")
+current_dir = os.path.dirname(os.path.abspath(__file__))
+nltk_data_dir = os.path.join(current_dir, "nltk_data")
 
-try:
-    nltk.data.find("taggers/averaged_perceptron_tagger")
-except LookupError:
-    nltk.download("averaged_perceptron_tagger")
+if not os.path.exists(nltk_data_dir):
+    os.makedirs(nltk_data_dir)
 
+nltk.data.path.insert(0, nltk_data_dir)
 
+nltk.download("punkt", download_dir=nltk_data_dir)
+nltk.download('averaged_perceptron_tagger_eng', download_dir=nltk_data_dir)
 
 @st.cache_data
 def preprocess_text(text):
