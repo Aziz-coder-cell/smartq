@@ -1,4 +1,3 @@
-
 ```markdown
 # SmartQ 🧠✨  
 **AI‑powered Quiz Generator**
@@ -85,6 +84,7 @@ Here’s a quick look at SmartQ in action:
 - **Interactive Quiz with Feedback**  
   ![App Screenshot 3](screenshots/screenshot3.png)  
 
+*(Replace with your actual image paths in the repo.)*  
 
 ---
 
@@ -117,3 +117,4 @@ SmartQ’s question generation and distractor creation were evaluated using a co
 
 ## 📌 License  
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+```
