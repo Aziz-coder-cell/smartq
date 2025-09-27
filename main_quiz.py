@@ -6,9 +6,16 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from transformers import pipeline, T5Tokenizer
 from sentence_transformers import SentenceTransformer, util
 
-# Download punkt tokenizer for sentence splitting
-nltk.download("punkt")
-nltk.download('averaged_perceptron_tagger')
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
+
+try:
+    nltk.data.find("taggers/averaged_perceptron_tagger")
+except LookupError:
+    nltk.download("averaged_perceptron_tagger")
+
 
 
 @st.cache_data
